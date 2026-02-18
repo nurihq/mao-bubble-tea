@@ -1,0 +1,23 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="500" fill="#ffe4e1"/>
+  <!-- Cup -->
+  <path d="M150 100 L350 100 L330 400 L170 400 Z" fill="#ffb6c1" stroke="#ff69b4" stroke-width="5"/>
+  <!-- Lid -->
+  <path d="M150 100 Q250 50 350 100" fill="#ff69b4" stroke="#ff1493" stroke-width="5"/>
+  <!-- Straw -->
+  <rect x="240" y="20" width="20" height="100" fill="#ff1493"/>
+  <!-- Cat Face -->
+  <circle cx="210" cy="250" r="10" fill="#444"/>
+  <circle cx="290" cy="250" r="10" fill="#444"/>
+  <path d="M240 270 Q250 280 260 270" stroke="#444" stroke-width="3" fill="none"/>
+  <path d="M240 270 Q230 280 220 270" stroke="#444" stroke-width="3" fill="none"/>
+  <!-- Ears -->
+  <path d="M180 150 L200 110 L220 150 Z" fill="#ff69b4"/>
+  <path d="M280 150 L300 110 L320 150 Z" fill="#ff69b4"/>
+  <!-- Pearls -->
+  <circle cx="200" cy="350" r="15" fill="#444"/>
+  <circle cx="250" cy="360" r="15" fill="#444"/>
+  <circle cx="300" cy="350" r="15" fill="#444"/>
+  <circle cx="220" cy="320" r="15" fill="#444"/>
+  <circle cx="280" cy="320" r="15" fill="#444"/>
+</svg>

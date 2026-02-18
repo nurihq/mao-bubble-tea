@@ -1,0 +1,12 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Cup -->
+  <path d="M16 16 L48 16 L44 56 L20 56 Z" fill="#ff69b4" stroke="#ff1493" stroke-width="2"/>
+  <!-- Lid -->
+  <path d="M14 16 Q32 8 50 16" fill="#ffb6c1" stroke="#ff1493" stroke-width="2"/>
+  <!-- Straw -->
+  <rect x="30" y="4" width="4" height="16" fill="#ff1493"/>
+  <!-- Pearls -->
+  <circle cx="24" cy="50" r="2" fill="#444"/>
+  <circle cx="32" cy="52" r="2" fill="#444"/>
+  <circle cx="40" cy="50" r="2" fill="#444"/>
+</svg>

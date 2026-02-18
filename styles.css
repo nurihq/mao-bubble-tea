@@ -219,6 +219,60 @@ body {
     color: white;
 }
 
+/* Photo Section */
+.photo-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.polaroid {
+    background: white;
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    max-width: 250px;
+    text-align: center;
+}
+
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.caption {
+    font-family: 'Indie Flower', cursive, sans-serif;
+    /* Fallback to sans-serif if Indie Flower not loaded */
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.rotate-left {
+    transform: rotate(-6deg);
+}
+
+.rotate-right {
+    transform: rotate(5deg);
+}
+
+.rotate-center {
+    transform: rotate(-2deg);
+}
+
 .menu-preview h2 {
     font-family: var(--font-heading);
     color: var(--color-text);
@@ -253,4 +307,4 @@ footer {
     margin-top: 3rem;
     color: #999;
     font-size: 0.9rem;
-}
+}/* Post-it Note Styles */ .photo-section { display: flex; justify-content: center; gap: 2rem; margin-bottom: 4rem; flex-wrap: wrap; padding: 2rem; } .polaroid { background: white; padding: 1rem 1rem 2rem 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.15); transform-origin: center; transition: transform 0.3s ease; max-width: 250px; text-align: center; } .polaroid:hover { transform: scale(1.1) rotate(0deg) !important; z-index: 10; box-shadow: 0 15px 30px rgba(0,0,0,0.25); } .polaroid img { width: 100%; height: auto; display: block; margin-bottom: 1rem; border-radius: 4px; } .caption { font-family: 'Indie Flower', cursive, sans-serif; font-size: 1.5rem; color: #333; font-weight: 600; } .rotate-left { transform: rotate(-6deg); } .rotate-right { transform: rotate(5deg); } .rotate-center { transform: rotate(-2deg); }
