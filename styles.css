@@ -1,0 +1,256 @@
+:root {
+    --color-bg: #fff0f5;
+    /* Lavender Blush */
+    --color-primary: #ff69b4;
+    /* Hot Pink */
+    --color-secondary: #00ced1;
+    /* Dark Turquoise */
+    --color-accent: #ffa500;
+    /* Orange */
+    --color-text: #4b0082;
+    /* Indigo */
+    --font-heading: 'Baloo 2', cursive;
+    --font-body: 'Fredoka', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-shapes .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: -1;
+    animation: float 10s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #ffe4e1;
+    top: -50px;
+    left: -50px;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 200px;
+    height: 200px;
+    background: #e0ffff;
+    bottom: 10%;
+    right: -20px;
+    animation-delay: 2s;
+}
+
+.shape-3 {
+    width: 150px;
+    height: 150px;
+    background: #fffacd;
+    top: 20%;
+    right: 10%;
+    animation-delay: 4s;
+}
+
+.shape-4 {
+    width: 100px;
+    height: 100px;
+    background: #e6e6fa;
+    bottom: 30%;
+    left: 5%;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.logo span {
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+.word-mao {
+    color: var(--color-primary);
+    animation-delay: 0s;
+}
+
+.word-bubble {
+    color: var(--color-secondary);
+    animation-delay: 0.2s;
+}
+
+.word-tea {
+    color: var(--color-accent);
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.location-badge {
+    display: inline-block;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+}
+
+.links-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: white;
+    color: var(--color-text);
+    border: 3px solid transparent;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.cta-button.wolt {
+    border-color: #009de0;
+    color: #009de0;
+}
+
+.cta-button.wolt:hover {
+    background: #009de0;
+    color: white;
+}
+
+.cta-button.facebook {
+    border-color: #1877f2;
+    color: #1877f2;
+}
+
+.cta-button.facebook:hover {
+    background: #1877f2;
+    color: white;
+}
+
+.cta-button.instagram {
+    border-color: #e4405f;
+    color: #e4405f;
+}
+
+.cta-button.instagram:hover {
+    background: #e4405f;
+    color: white;
+}
+
+.menu-preview h2 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.menu-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.menu-item .emoji {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+footer {
+    margin-top: 3rem;
+    color: #999;
+    font-size: 0.9rem;
+}
