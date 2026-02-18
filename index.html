@@ -88,18 +88,21 @@
         <section class="menu-preview">
             <h2 data-en="Popular Picks" data-ka="პოპულარული არჩევანი">Popular Picks</h2>
             <div class="menu-grid">
-                <div class="menu-item">
+                <a href="https://wolt.com/en/geo/tbilisi/restaurant/mao-bubble-tea/items/black-sugar-series-2"
+                    target="_blank" class="menu-item" style="text-decoration: none; color: inherit;">
                     <div class="emoji">🐯</div>
                     <h3 data-en="Tiger Milk Tea" data-ka="ვეფხვის რძის ჩაი">Tiger Milk Tea</h3>
-                </div>
-                <div class="menu-item">
+                </a>
+                <a href="https://wolt.com/en/geo/tbilisi/restaurant/mao-bubble-tea/items/matcha-series-3"
+                    target="_blank" class="menu-item" style="text-decoration: none; color: inherit;">
                     <div class="emoji">🐊</div>
                     <h3 data-en="Matcha Latte" data-ka="მაჩა ლატე">Matcha Latte</h3>
-                </div>
-                <div class="menu-item">
+                </a>
+                <a href="https://wolt.com/en/geo/tbilisi/restaurant/mao-bubble-tea/mango-paradise-itemid-667a2521a9bb01366fdd249d"
+                    target="_blank" class="menu-item" style="text-decoration: none; color: inherit;">
                     <div class="emoji">🥭</div>
                     <h3 data-en="Mango Paradise" data-ka="მანგოს სამოთხე">Mango Paradise</h3>
-                </div>
+                </a>
             </div>
         </section>
 
@@ -118,8 +121,8 @@
         let currentLang = localStorage.getItem('lang') || 'en';
 
         function updateLanguage() {
-            // Update button flag
-            langBtn.textContent = currentLang === 'en' ? '🇺🇸' : '🇬🇪';
+            // Update button flag to show the *target* language
+            langBtn.textContent = currentLang === 'en' ? '🇬🇪' : '🇺🇸';
 
             // Update text content
             elements.forEach(el => {
