@@ -30,6 +30,8 @@
 
 <body>
 
+    <button id="lang-toggle" class="lang-btn" aria-label="Toggle Language">🇺🇸</button>
+
     <div class="background-shapes">
         <div class="shape shape-1"></div>
         <div class="shape shape-2"></div>
@@ -44,22 +46,24 @@
                 <span class="word-bubble">Bubble</span>
                 <span class="word-tea">Tea</span>
             </h1>
-            <p class="tagline">Super Cute. Super Funky. Super Tasty!</p>
-            <div class="location-badge">📍 Tbilisi, Georgia</div>
+            <p class="tagline" data-en="Super Cute. Super Funky. Super Tasty!"
+                data-ka="სუპერ საყვარელი. სუპერ ფანკი. სუპერ გემრიელი!">Super Cute. Super Funky. Super Tasty!</p>
+            <div class="location-badge" data-en="📍 Tbilisi, Georgia" data-ka="📍 თბილისი, საქართველო">📍 Tbilisi,
+                Georgia</div>
         </header>
 
         <section class="photo-section">
             <div class="polaroid rotate-left">
                 <img src="images/boba_pink_cat.svg" alt="Cute Pink Boba">
-                <p class="caption">Meow! 🐱</p>
+                <p class="caption" data-en="Meow! 🐱" data-ka="მიაუ! 🐱">Meow! 🐱</p>
             </div>
             <div class="polaroid rotate-right">
                 <img src="images/boba_blue_bear.svg" alt="Cute Blue Boba">
-                <p class="caption">Beary Good! 🐻</p>
+                <p class="caption" data-en="Beary Good! 🐻" data-ka="დათუნია! 🐻">Beary Good! 🐻</p>
             </div>
             <div class="polaroid rotate-center">
                 <img src="images/boba_yellow_duck.svg" alt="Cute Yellow Boba">
-                <p class="caption">Quack! 🦆</p>
+                <p class="caption" data-en="Quack! 🦆" data-ka="ყიყყი! 🦆">Quack! 🦆</p>
             </div>
         </section>
 
@@ -67,42 +71,73 @@
             <div id="wolt-anchor"></div>
             <a href="https://wolt.com/en/geo/tbilisi/venue/mao-bubble-tea" target="_blank" class="cta-button wolt">
                 <span class="icon">🛵</span>
-                <span class="text">Order on Wolt</span>
+                <span class="text" data-en="Order on Wolt" data-ka="შეკვეთა Wolt-ზე">Order on Wolt</span>
             </a>
             <a href="https://www.facebook.com/MaoBubbletea.GE" target="_blank" class="cta-button facebook">
                 <span class="icon">👍</span>
-                <span class="text">Like us on Facebook</span>
+                <span class="text" data-en="Like us on Facebook" data-ka="მოგვიწონეთ Facebook-ზე">Like us on
+                    Facebook</span>
             </a>
             <a href="https://www.instagram.com/mao_bubbletea/" target="_blank" class="cta-button instagram">
                 <span class="icon">📸</span>
-                <span class="text">Follow on Instagram</span>
+                <span class="text" data-en="Follow on Instagram" data-ka="გამოგვყევით Instagram-ზე">Follow on
+                    Instagram</span>
             </a>
         </section>
 
         <section class="menu-preview">
-            <h2>Popular Picks</h2>
+            <h2 data-en="Popular Picks" data-ka="პოპულარული არჩევანი">Popular Picks</h2>
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="emoji">🐯</div>
-                    <h3>Tiger Milk Tea</h3>
+                    <h3 data-en="Tiger Milk Tea" data-ka="ვეფხვის რძის ჩაი">Tiger Milk Tea</h3>
                 </div>
                 <div class="menu-item">
                     <div class="emoji">🐊</div>
-                    <h3>Matcha Latte</h3>
+                    <h3 data-en="Matcha Latte" data-ka="მაჩა ლატე">Matcha Latte</h3>
                 </div>
                 <div class="menu-item">
                     <div class="emoji">🥭</div>
-                    <h3>Mango Paradise</h3>
+                    <h3 data-en="Mango Paradise" data-ka="მანგოს სამოთხე">Mango Paradise</h3>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>Built with 🧋 by <a href="https://nuri.software" target="_blank"
+            <p><span data-en="Built with 🧋 by" data-ka="შექმნილია 🧋-ით">Built with 🧋 by</span> <a
+                    href="https://nuri.software" target="_blank"
                     style="color: inherit; text-decoration: none; font-weight: bold;">Nuri</a></p>
         </footer>
     </main>
 
+    <script>
+        const langBtn = document.getElementById('lang-toggle');
+        const elements = document.querySelectorAll('[data-en]');
+
+        // Check local storage or default to English
+        let currentLang = localStorage.getItem('lang') || 'en';
+
+        function updateLanguage() {
+            // Update button flag
+            langBtn.textContent = currentLang === 'en' ? '🇺🇸' : '🇬🇪';
+
+            // Update text content
+            elements.forEach(el => {
+                el.textContent = el.getAttribute(`data-${currentLang}`);
+            });
+
+            // Save preference
+            localStorage.setItem('lang', currentLang);
+        }
+
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'ka' : 'en';
+            updateLanguage();
+        });
+
+        // Initialize
+        updateLanguage();
+    </script>
 </body>
 
 </html>

@@ -87,7 +87,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 900px;
     width: 100%;
     padding: 2rem;
     text-align: center;
@@ -307,4 +307,139 @@ footer {
     margin-top: 3rem;
     color: #999;
     font-size: 0.9rem;
-}/* Post-it Note Styles */ .photo-section { display: flex; justify-content: center; gap: 2rem; margin-bottom: 4rem; flex-wrap: wrap; padding: 2rem; } .polaroid { background: white; padding: 1rem 1rem 2rem 1rem; box-shadow: 0 10px 20px rgba(0,0,0,0.15); transform-origin: center; transition: transform 0.3s ease; max-width: 250px; text-align: center; } .polaroid:hover { transform: scale(1.1) rotate(0deg) !important; z-index: 10; box-shadow: 0 15px 30px rgba(0,0,0,0.25); } .polaroid img { width: 100%; height: auto; display: block; margin-bottom: 1rem; border-radius: 4px; } .caption { font-family: 'Indie Flower', cursive, sans-serif; font-size: 1.5rem; color: #333; font-weight: 600; } .rotate-left { transform: rotate(-6deg); } .rotate-right { transform: rotate(5deg); } .rotate-center { transform: rotate(-2deg); }
+}
+
+/* Post-it Note Styles */
+.photo-section {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+
+.polaroid {
+    background: white;
+    padding: 1rem 1rem 2rem 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    max-width: 250px;
+    text-align: center;
+}
+
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.caption {
+    font-family: 'Indie Flower', cursive, sans-serif;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.rotate-left {
+    transform: rotate(-6deg);
+}
+
+.rotate-right {
+    transform: rotate(5deg);
+}
+
+.rotate-center {
+    transform: rotate(-2deg);
+}
+
+/* Post-it Note Styles */
+.photo-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.polaroid {
+    background: white;
+    padding: 0.8rem 0.8rem 1.5rem 0.8rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    max-width: 220px;
+    width: 100%;
+    text-align: center;
+}
+
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg) !important;
+    z-index: 10;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.polaroid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.8rem;
+    border-radius: 2px;
+}
+
+.caption {
+    font-family: 'Indie Flower', cursive, sans-serif;
+    font-size: 1.3rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.rotate-left {
+    transform: rotate(-4deg);
+    margin-top: 10px;
+}
+
+.rotate-right {
+    transform: rotate(4deg);
+    margin-top: 15px;
+}
+
+.rotate-center {
+    transform: rotate(-1deg);
+    margin-top: -5px;
+}
+
+/* Language Toggle */
+.lang-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+}
